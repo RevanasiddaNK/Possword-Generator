@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Possword Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image" href="/images/generatePossword.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap" rel="stylesheet"/>
+
+</head>
+<body>
+            <!-- Headline of application -->
+            <div class="container">
+
+                <h1>POSSWORD GENERATOR</h1>
+        
+                <!-- possword Display Section -->
+                <div class="displayPossword">
+                    <input readonly class="Possword" placeholder="Possword">
+        
+                        <button class="copy-button">
+                            <span class="toolTip"></span>
+                            <!-- <i class="fa-light fa-copy" style="color: #74C0FC;" class="copyBtn" data-copy-icon> </i> -->
+                            <img src="images/copyButton.png" alt="" height="23" width="23" class="copyBtn" data-copy-icon>
+                        </button>
+        
+                </div>
+        
+                <!-- possword Generator Input -->
+        
+                <div class="inputContainer">
+                    <div class="posswordLength">
+                        <p>Password Length</p>
+                        <p data-lengthNumber>0</p>
+                    </div>
+                    <!-- Slider -->
+                    <input type="range" min="1" max="20" step="1" class="slider" data-LengthSlider>
+                
+        
+                <!-- possword check box  -->
+                <div class="CheckBoxContainer">
+                    <div class="check">
+                        <input type="checkbox" id="upperLetter">
+                        <label for="upperLetter">Include Uppercase Letters</label>
+                    </div>
+        
+                    <div class="check">
+                        <input type="checkbox" id="lowerLetter">
+                        <label for="lowerLetter">Include Lowercase Letters</label>
+                    </div>
+        
+                    <div class="check">
+                        <input type="checkbox" id="number">
+                        <label for="number">Include Numbers</label>
+                    </div>
+        
+                    <div class="check">
+                        <input type="checkbox" id="symbol">
+                        <label for="symbol">Include Symbols</label>
+                    </div>
+                </div>
+        
+                <!-- strength of possword Section -->
+                <div class="strength">
+                    <p>Strength</p>
+                    <div class="CircularIndicator" data-indicator></div>
+                </div>
+                
+                <!-- Generate / submit Button -->
+        
+                <button data-generatePosswordButton class="GenerateButton">GENERATE POSSWORD</button>
+                
+            </div>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+</body>
+</html>
